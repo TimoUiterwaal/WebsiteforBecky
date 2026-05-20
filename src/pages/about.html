@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🐾</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./about.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>About This Place</h1>
+      <p>A website that probably didn't need to exist, yet here we are.</p>
+    </div>
+
+    <div class="about-layout">
+      <!-- Story -->
+      <div class="about-story">
+        <h2>The Origin Story</h2>
+        <p>
+          This started because I love two things: cats and coffee.
+          Not in a "I have a favourite mug" way. In a "I have opinions about espresso extraction
+          ratios and I will narrate my cat's inner monologue unprompted" kind of way.
+        </p>
+        <p>
+          One day I thought: <em>what if there was a website that was just... cat and coffee games?</em>
+          No login. No monetisation. No dark patterns. Just vibes, some emoji, and small games
+          you can play on your lunch break.
+        </p>
+        <p>
+          So I built it. This is it. You're here. Welcome.
+        </p>
+
+        <div class="cat-row">
+          <div class="cat-pose">😺 <span>The Optimist</span></div>
+          <div class="cat-pose">😸 <span>Just Happy</span></div>
+          <div class="cat-pose">😼 <span>Had Enough</span></div>
+          <div class="cat-pose">😾 <span>Done With You</span></div>
+          <div class="cat-pose">🙀 <span>Empty Cup</span></div>
+        </div>
+      </div>
+
+      <!-- Café receipt -->
+      <div class="receipt stamp">
+        <div class="receipt-header">
+          <div class="receipt-logo">☕ PURRING CUP</div>
+          <div class="receipt-sub">Build Receipt · No. 001</div>
+          <div class="receipt-date" id="receiptDate"></div>
+        </div>
+
+        <div class="receipt-divider">- - - - - - - - - - - - - -</div>
+
+        <div class="receipt-items">
+          <div class="receipt-item"><span>1× Motivation</span><span>FREE</span></div>
+          <div class="receipt-item"><span>1× Vite + Vanilla JS</span><span>$0.00</span></div>
+          <div class="receipt-item"><span>5× Mini Games</span><span>Many hours</span></div>
+          <div class="receipt-item"><span>1× CSS Animation rabbit hole</span><span>4 hrs</span></div>
+          <div class="receipt-item"><span>2× Bugs (featuring me)</span><span>$0.00</span></div>
+          <div class="receipt-item"><span>∞× Coffee consumed</span><span>Ongoing</span></div>
+          <div class="receipt-item"><span>1× Cat supervision</span><span>Free (forced)</span></div>
+          <div class="receipt-item"><span>1× Secret menu page</span><span>Priceless</span></div>
+          <div class="receipt-item"><span>Deployed to Azure SWA</span><span>✓</span></div>
+        </div>
+
+        <div class="receipt-divider">- - - - - - - - - - - - - -</div>
+
+        <div class="receipt-total">
+          <span>TOTAL FUN</span><span>100%</span>
+        </div>
+        <div class="receipt-total">
+          <span>REGRETS</span><span>0</span>
+        </div>
+
+        <div class="receipt-divider">- - - - - - - - - - - - - -</div>
+
+        <div class="receipt-footer">
+          Thank you for visiting!<br>
+          Please tip your barista cat.<br>
+          (She will ignore you.)<br><br>
+          =^..^=
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools used -->
+    <section class="credits-section">
+      <h2>Built With</h2>
+      <div class="credits-grid">
+        <div class="credit-item card">
+          <span class="credit-emoji">⚡</span>
+          <strong>Vite</strong>
+          <p>Blazing fast dev server and build tool. Zero config needed.</p>
+        </div>
+        <div class="credit-item card">
+          <span class="credit-emoji">🍛</span>
+          <strong>Vanilla JS</strong>
+          <p>No frameworks. Just modules, requestAnimationFrame, and hope.</p>
+        </div>
+        <div class="credit-item card">
+          <span class="credit-emoji">🎨</span>
+          <strong>CSS Custom Properties</strong>
+          <p>One tokens file to rule all the warm browns and caramel accents.</p>
+        </div>
+        <div class="credit-item card">
+          <span class="credit-emoji">🔊</span>
+          <strong>Web Audio API</strong>
+          <p>All sounds synthesized in the browser. No audio files required.</p>
+        </div>
+        <div class="credit-item card">
+          <span class="credit-emoji">☁️</span>
+          <strong>Azure Static Web Apps</strong>
+          <p>Free tier. CI/CD via GitHub Actions. Deployed in minutes.</p>
+        </div>
+        <div class="credit-item card">
+          <span class="credit-emoji">🐱</span>
+          <strong>The Cat</strong>
+          <p>Supervised everything. Approved nothing. Knocked over my water twice.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./about.js"></script>
+</body>
+</html>

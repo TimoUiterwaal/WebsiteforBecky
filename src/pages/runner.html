@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Runner — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🏃</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./runner.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>🏃 Endless Cat Runner</h1>
+      <p>Jump over obstacles. Collect coffee beans. Don't die.</p>
+    </div>
+
+    <div class="game-wrap">
+      <div class="runner-hud">
+        <span class="badge">Score: <strong id="runnerScore">0</strong></span>
+        <span class="badge badge-gold">Best: <strong id="runnerBest">0</strong></span>
+        <span class="badge">Beans: <strong id="runnerBeans">0</strong> ☕</span>
+      </div>
+
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="runnerCanvas"></canvas>
+        <div class="runner-overlay" id="runnerOverlay">
+          <div style="font-size:4rem" id="overlayEmoji">😺</div>
+          <h2 id="overlayTitle">Ready to Run?</h2>
+          <p id="overlayMsg">Press <kbd>Space</kbd> or tap to start. Jump to avoid obstacles!</p>
+          <button class="btn" id="runnerStartBtn">Start Running ➜</button>
+        </div>
+      </div>
+
+      <div class="runner-hint">Press <kbd>Space</kbd> or tap to jump · Hold for higher jump</div>
+
+      <div class="top-scores">
+        <h3>🏆 Personal Best Runs</h3>
+        <ol class="score-list" id="scoreList"></ol>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./runner.js"></script>
+</body>
+</html>

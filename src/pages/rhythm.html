@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour Rhythm — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>☕</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./rhythm.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>☕ Pour Rhythm</h1>
+      <p>Hit Space (or tap) when the stream hits the cup. Don't spill the coffee.</p>
+    </div>
+
+    <div class="game-wrap">
+      <!-- Start screen -->
+      <div id="startScreen" class="rhythm-screen">
+        <div style="font-size:5rem">☕</div>
+        <h2>Ready to Pour?</h2>
+        <p>Press <kbd>Space</kbd> or tap the screen when the coffee stream is in the <span style="color:var(--color-mint-tea);font-weight:700">green zone</span>.</p>
+        <div class="pattern-select">
+          <button class="btn btn-secondary pattern-btn active" data-pattern="slow">🐢 Slow Drip</button>
+          <button class="btn btn-secondary pattern-btn" data-pattern="steady">🐾 Steady Pour</button>
+          <button class="btn btn-secondary pattern-btn" data-pattern="rush">⚡ Espresso Rush</button>
+        </div>
+        <button class="btn" id="startBtn">Start Pouring ➜</button>
+      </div>
+
+      <!-- Game screen -->
+      <div id="gameScreen" class="rhythm-screen" style="display:none">
+        <div class="rhythm-hud">
+          <span>Round <strong id="roundNum">1</strong> / 10</span>
+          <span>Fill: <strong id="fillPct">0%</strong></span>
+          <span id="lastResult" class="result-badge"></span>
+        </div>
+        <div class="rhythm-stage" id="rhythmStage">
+          <div class="pour-track">
+            <div class="green-zone" id="greenZone"></div>
+            <div class="stream-marker" id="streamMarker"></div>
+          </div>
+          <div class="cup-wrap">
+            <svg class="cup-svg" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="cupClip">
+                  <path d="M15,10 L5,125 L95,125 L85,10 Z"/>
+                </clipPath>
+              </defs>
+              <!-- Liquid fill (animated height via JS) -->
+              <rect id="cupFill" x="5" y="125" width="90" height="0" fill="var(--color-caramel)" clip-path="url(#cupClip)" opacity="0.85"/>
+              <!-- Cup outline -->
+              <path d="M15,10 L5,125 L95,125 L85,10 Z" fill="none" stroke="var(--color-mocha)" stroke-width="4" stroke-linejoin="round"/>
+              <!-- Handle -->
+              <path d="M85,40 Q110,40 110,75 Q110,110 85,110" fill="none" stroke="var(--color-mocha)" stroke-width="4"/>
+            </svg>
+          </div>
+        </div>
+        <p class="tap-hint">Press <kbd>Space</kbd> or tap to catch the pour!</p>
+      </div>
+
+      <!-- Result screen -->
+      <div id="resultScreen" class="rhythm-screen" style="display:none">
+        <div id="resultEmoji" style="font-size:5rem"></div>
+        <h2 id="resultTitle"></h2>
+        <p id="resultMsg"></p>
+        <div id="latte-art" class="latte-art" style="display:none">
+          <div class="latte-cat">
+            <div class="latte-head"></div>
+            <div class="latte-ears">
+              <div class="ear left"></div>
+              <div class="ear right"></div>
+            </div>
+            <div class="latte-face">
+              <div class="latte-eye left"></div>
+              <div class="latte-eye right"></div>
+              <div class="latte-nose"></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" id="retryBtn">Pour Again ➜</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./rhythm.js"></script>
+</body>
+</html>

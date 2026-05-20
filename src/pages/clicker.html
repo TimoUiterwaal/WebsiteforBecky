@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Clicker — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🐱</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./clicker.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>🐱 Cat Clicker</h1>
+      <p>Click the cat. Earn Beans. Buy upgrades. Question your life choices.</p>
+    </div>
+
+    <div class="clicker-layout">
+      <!-- Left: cat + counter -->
+      <div class="clicker-left">
+        <div class="bean-display">
+          <span class="bean-count" id="beanCount">0</span>
+          <span class="bean-label">☕ Beans</span>
+        </div>
+        <div class="bps-display" id="bpsDisplay">0 beans/sec</div>
+
+        <button class="click-cat" id="clickCat" aria-label="Click to brew">
+          <span class="cat-face">😺</span>
+        </button>
+        <p class="click-hint">Click the cat!</p>
+
+        <div id="prestigeWrap" class="prestige-wrap" style="display:none">
+          <button class="btn btn-secondary" id="prestigeBtn">✨ Prestige (10,000 beans total)</button>
+          <p class="prestige-hint">Reset progress for a golden paw badge</p>
+        </div>
+
+        <div id="badges" class="badges-row"></div>
+      </div>
+
+      <!-- Right: shop -->
+      <div class="clicker-right">
+        <h2>☕ Upgrade Shop</h2>
+        <div class="shop-list" id="shopList"></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./clicker.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Menu — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🗺️</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./menu.css">
+</head>
+<body>
+  <main>
+    <div id="secretReveal" class="secret-reveal" style="display:none">
+      <span class="badge badge-gold" style="font-size:1.1rem">🔓 Secret Menu Discovered!</span>
+    </div>
+
+    <div class="chalkboard">
+      <div class="chalk-header">
+        <div class="chalk-logo">=^..^=</div>
+        <h1>The Purring Cup</h1>
+        <p class="chalk-sub">Secret Menu · Est. When the Cat Felt Like It</p>
+        <div class="chalk-divider">~ ~ ~ ☕ ~ ~ ~</div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-section">
+          <h2>🔥 Hot Brews</h2>
+          <ul class="menu-items">
+            <li><span class="item-name">Espresso Purrfetto</span><span class="item-price">$4.20</span></li>
+            <li class="item-desc">Single origin, judged silently</li>
+            <li><span class="item-name">The Midnight Tabby</span><span class="item-price">$5.00</span></li>
+            <li class="item-desc">Double shot, no meow-lk, dark as your cat's soul</li>
+            <li><span class="item-name">Meow-chiato</span><span class="item-price">$5.50</span></li>
+            <li class="item-desc">Espresso marked with silky purrfect foam</li>
+            <li><span class="item-name">Caramel Claw Macchiato</span><span class="item-price">$6.00</span></li>
+            <li class="item-desc">Extra caramel drizzle. The claws are optional.</li>
+            <li><span class="item-name">Hiss-presso</span><span class="item-price">$3.80</span></li>
+            <li class="item-desc">Plain espresso. The barista is moody today.</li>
+          </ul>
+        </div>
+
+        <div class="menu-section">
+          <h2>🧊 Cold Paws</h2>
+          <ul class="menu-items">
+            <li><span class="item-name">Catnip Cold Brew</span><span class="item-price">$6.50</span></li>
+            <li class="item-desc">18-hour steep. You won't know what hit you.</li>
+            <li><span class="item-name">Frappé de Félin</span><span class="item-price">$7.00</span></li>
+            <li class="item-desc">Blended, iced, garnished with a suspicious paw print</li>
+            <li><span class="item-name">Tabby Thai Tea</span><span class="item-price">$5.50</span></li>
+            <li class="item-desc">Creamy, orange, made with suspicion and condensed milk</li>
+            <li><span class="item-name">Purrple Lavender Latte (cold)</span><span class="item-price">$6.00</span></li>
+            <li class="item-desc">Floral, calming, will not stop your cat from knocking things over</li>
+          </ul>
+        </div>
+
+        <div class="menu-section">
+          <h2>🥐 Pastries</h2>
+          <ul class="menu-items">
+            <li><span class="item-name">Croissant du Chat</span><span class="item-price">$4.00</span></li>
+            <li class="item-desc">Flaky. Buttery. The cat will want some.</li>
+            <li><span class="item-name">Espresso Brownie</span><span class="item-price">$3.50</span></li>
+            <li class="item-desc">Dense with regret and caffeinated purpose</li>
+            <li><span class="item-name">Paw Print Shortbread</span><span class="item-price">$2.50</span></li>
+            <li class="item-desc">Hand-stamped by the cats. Hygiene not guaranteed.</li>
+            <li><span class="item-name">Bean & Chocolate Tart</span><span class="item-price">$5.00</span></li>
+            <li class="item-desc">Coffee custard. One of the best mistakes we ever made.</li>
+          </ul>
+        </div>
+
+        <div class="menu-section">
+          <h2>🐟 Cat Treats</h2>
+          <ul class="menu-items">
+            <li><span class="item-name">Catnip Frappé</span><span class="item-price">$6.50</span></li>
+            <li class="item-desc">Not for humans. Don't ask again.</li>
+            <li><span class="item-name">Tuna Pawtisserie</span><span class="item-price">$3.00</span></li>
+            <li class="item-desc">The cats pay for these with purrs</li>
+            <li><span class="item-name">Sardine Macaron</span><span class="item-price">$2.00</span></li>
+            <li class="item-desc">Yes, really. They love it. You wouldn't.</li>
+            <li><span class="item-name">Kitty Coldbrew</span><span class="item-price">$0.00</span></li>
+            <li class="item-desc">A bowl of water. Cats drink from the tap anyway.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="chalk-footer">
+        <div class="chalk-divider">~ ~ ~ 🐾 ~ ~ ~</div>
+        <p>All proceeds go toward the cats.</p>
+        <p>The cats do not share.</p>
+        <p class="chalk-address">1 Whisker Lane · Open whenever the cat feels like it · Closed Mondays (the cat is busy)</p>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./menu.js"></script>
+</body>
+</html>

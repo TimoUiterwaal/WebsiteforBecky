@@ -1,0 +1,124 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-12);
+  align-items: start;
+  margin-bottom: var(--space-12);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 700px) {
+  .about-layout { grid-template-columns: 1fr; }
+}
+
+.about-story {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-story p { max-width: 60ch; }
+.about-story em { color: var(--color-caramel-dark); font-style: italic; }
+
+.cat-row {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+
+.cat-pose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 2.5rem;
+}
+
+.cat-pose span {
+  font-size: 0.72rem;
+  color: var(--color-tabby);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Receipt */
+.receipt {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: white;
+  color: #333;
+  padding: var(--space-6);
+  min-width: 240px;
+  max-width: 280px;
+  line-height: 1.8;
+  border: 1px solid #ddd;
+  box-shadow: 4px 4px 0 var(--color-latte);
+  transform: rotate(1deg);
+}
+
+@media (max-width: 700px) {
+  .receipt { max-width: 100%; transform: none; }
+}
+
+.receipt-header { text-align: center; margin-bottom: var(--space-2); }
+.receipt-logo { font-weight: 700; font-size: 1rem; letter-spacing: 0.1rem; }
+.receipt-sub  { font-size: 0.75rem; color: #666; }
+.receipt-date { font-size: 0.75rem; color: #888; }
+
+.receipt-divider {
+  color: #ccc;
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  margin: var(--space-2) 0;
+  text-align: center;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.receipt-footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.78rem;
+  margin-top: var(--space-4);
+  line-height: 1.8;
+}
+
+/* Credits */
+.credits-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.credits-section h2 { margin-bottom: var(--space-6); }
+
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.credit-emoji { font-size: 2rem; }
+.credit-item p { font-size: 0.9rem; color: var(--color-tabby); max-width: 100%; }

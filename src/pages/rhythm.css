@@ -1,0 +1,194 @@
+.rhythm-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--color-foam);
+  border: 2px solid var(--color-latte);
+  border-bottom-width: 3px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--color-mocha);
+}
+
+.pattern-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.pattern-btn.active {
+  background: var(--color-mocha);
+  color: var(--color-cream);
+  border-color: var(--color-espresso);
+}
+
+/* HUD */
+.rhythm-hud {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-tabby);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-foam);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-whisker);
+}
+
+.rhythm-hud strong {
+  font-family: var(--font-mono);
+  color: var(--color-mocha);
+}
+
+.result-badge {
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.result-badge.perfect { color: #FFD700; }
+.result-badge.good    { color: var(--color-mint-tea); }
+.result-badge.miss    { color: var(--color-rose-hip); }
+
+/* Stage */
+.rhythm-stage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-8);
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Pour track */
+.pour-track {
+  width: 60px;
+  height: 320px;
+  background: var(--color-cream);
+  border: 2px solid var(--color-whisker);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.green-zone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgba(168,197,160,0.4);
+  border: 2px solid var(--color-mint-tea);
+  border-left: none;
+  border-right: none;
+  transition: top 0.1s;
+}
+
+.stream-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-caramel);
+  box-shadow: 0 0 0 4px rgba(212,135,78,0.3);
+  transition: background 0.1s;
+  top: 0;
+}
+
+.stream-marker.in-zone { background: var(--color-mint-tea); box-shadow: 0 0 0 6px rgba(168,197,160,0.4); }
+
+/* Cup */
+.cup-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cup-svg {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(62,31,0,0.2));
+}
+
+.tap-hint {
+  font-size: 0.9rem;
+  color: var(--color-tabby);
+}
+
+/* Latte art */
+.latte-art {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-foam) 60%, var(--color-latte) 100%);
+  border: 4px solid var(--color-latte);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.latte-cat { position: relative; width: 80px; height: 80px; }
+
+.latte-head {
+  width: 60px;
+  height: 55px;
+  background: var(--color-caramel);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+}
+
+.latte-ears { position: absolute; width: 60px; left: 50%; transform: translateX(-50%); top: 0; }
+.ear {
+  width: 18px; height: 20px;
+  background: var(--color-caramel);
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: -8px;
+  opacity: 0.7;
+}
+.ear.left  { left:  2px; transform: rotate(-15deg); }
+.ear.right { right: 2px; transform: rotate( 15deg); }
+
+.latte-face { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 50px; }
+.latte-eye {
+  width: 8px; height: 8px;
+  background: var(--color-mocha);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  opacity: 0.8;
+}
+.latte-eye.left  { left:  8px; }
+.latte-eye.right { right: 8px; }
+.latte-nose {
+  width: 6px; height: 4px;
+  background: var(--color-mocha);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+}

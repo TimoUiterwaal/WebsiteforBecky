@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Warm creams and browns */
+  --color-cream:        #FFF8F0;
+  --color-latte:        #C8A882;
+  --color-espresso:     #3E1F00;
+  --color-mocha:        #7B4F2E;
+  --color-foam:         #F5E6D3;
+  --color-caramel:      #D4874E;
+  --color-caramel-dark: #B8692E;
+
+  /* Cat grays */
+  --color-tabby:        #8B8680;
+  --color-whisker:      #D9D4CE;
+
+  /* Accent */
+  --color-mint-tea:     #A8C5A0;
+  --color-rose-hip:     #D4726A;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 8px rgba(62, 31, 0, 0.12);
+  --shadow-card: 0 4px 16px rgba(62, 31, 0, 0.18);
+  --shadow-stamp: 4px 4px 0 var(--color-latte);
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-cream:    #1C1008;
+    --color-foam:     #2A1A0A;
+    --color-espresso: #F5E6D3;
+    --color-mocha:    #C8A882;
+    --color-whisker:  #4A3520;
+    --color-tabby:    #A89880;
+  }
+}

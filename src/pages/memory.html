@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Cards — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🃏</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./memory.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>🃏 Memory Cards</h1>
+      <p>Find all the matching pairs. The cat is watching and judging you.</p>
+    </div>
+
+    <div class="game-wrap">
+      <div class="memory-controls">
+        <div class="memory-stats">
+          <span>Flips: <strong id="flipCount">0</strong></span>
+          <span>Pairs: <strong id="pairCount">0</strong> / <strong id="pairTotal">8</strong></span>
+          <span>Time: <strong id="timer">0s</strong></span>
+        </div>
+        <div class="difficulty-btns">
+          <button class="btn btn-secondary" data-diff="easy">Easy (4×4)</button>
+          <button class="btn btn-secondary" data-diff="hard">Hard (4×6)</button>
+        </div>
+        <button class="btn" id="newGameBtn">New Game</button>
+      </div>
+
+      <div class="memory-grid" id="memoryGrid"></div>
+
+      <div class="memory-win" id="memoryWin" style="display:none">
+        <div class="win-card stamp">
+          <div style="font-size:4rem">🎉</div>
+          <h2>Purrfect!</h2>
+          <p id="winMsg"></p>
+          <div id="bestScore" class="best-score"></div>
+          <button class="btn" id="playAgainBtn">Play Again ➜</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./memory.js"></script>
+</body>
+</html>

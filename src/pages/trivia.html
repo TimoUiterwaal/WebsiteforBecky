@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Trivia — Purring Cup Café</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>🧠</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./trivia.css">
+</head>
+<body>
+  <main>
+    <div class="page-title">
+      <h1>🧠 Cat Trivia</h1>
+      <p>10 questions. 15 seconds each. The cat is taking notes.</p>
+    </div>
+
+    <div class="game-wrap">
+      <!-- Start -->
+      <div id="triviaStart" class="trivia-screen">
+        <div style="font-size:5rem">😺</div>
+        <h2>Think You Know Cats & Coffee?</h2>
+        <p>10 random questions from our vault of 20. No penalties for wrong answers — but the cat will know.</p>
+        <button class="btn" id="triviaStartBtn">Start Quiz ➜</button>
+      </div>
+
+      <!-- Question -->
+      <div id="triviaGame" class="trivia-screen" style="display:none">
+        <div class="trivia-hud">
+          <span class="badge">Question <strong id="qNum">1</strong> / 10</span>
+          <span class="badge badge-gold" id="scoreDisplay">Score: 0</span>
+        </div>
+        <div class="timer-bar-wrap">
+          <div class="timer-bar" id="timerBar"></div>
+        </div>
+        <div class="question-card stamp">
+          <div class="q-emoji" id="qEmoji">🐱</div>
+          <p class="question-text" id="questionText"></p>
+        </div>
+        <div class="answer-grid" id="answerGrid"></div>
+        <div class="reaction" id="reaction" style="opacity:0"></div>
+      </div>
+
+      <!-- Results -->
+      <div id="triviaResult" class="trivia-screen" style="display:none">
+        <div id="resultEmoji" style="font-size:5rem"></div>
+        <h2 id="resultGrade"></h2>
+        <p id="resultMsg"></p>
+        <div class="score-display" id="finalScore"></div>
+        <div id="highScoreBadge"></div>
+        <button class="btn" id="playAgainTrivia">Try Again ➜</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./trivia.js"></script>
+</body>
+</html>

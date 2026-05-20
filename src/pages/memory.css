@@ -1,0 +1,137 @@
+.memory-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: var(--color-foam);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-whisker);
+}
+
+.memory-stats {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  font-size: 1rem;
+  color: var(--color-tabby);
+}
+
+.memory-stats strong {
+  color: var(--color-mocha);
+  font-family: var(--font-mono);
+}
+
+.difficulty-btns {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.difficulty-btns .btn.active {
+  background: var(--color-mocha);
+  color: var(--color-cream);
+  border-color: var(--color-espresso);
+}
+
+/* Card grid */
+.memory-grid {
+  display: grid;
+  gap: var(--space-3);
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.memory-grid.easy { grid-template-columns: repeat(4, 1fr); }
+.memory-grid.hard  { grid-template-columns: repeat(6, 1fr); }
+
+@media (max-width: 500px) {
+  .memory-grid.easy { grid-template-columns: repeat(4, 1fr); gap: var(--space-2); }
+  .memory-grid.hard  { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Card flip */
+.mem-card {
+  aspect-ratio: 1;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius-sm);
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.mem-card.flipped { transform: rotateY(180deg); }
+.mem-card.matched { pointer-events: none; }
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  border: 2px solid var(--color-mocha);
+  user-select: none;
+}
+
+.card-back {
+  background: var(--color-mocha);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,0.05) 8px,
+    rgba(255,255,255,0.05) 16px
+  );
+  color: var(--color-foam);
+  font-size: 1.2rem;
+}
+
+.card-front {
+  background: var(--color-foam);
+  transform: rotateY(180deg);
+  transition: box-shadow 0.3s;
+}
+
+.mem-card.matched .card-front {
+  background: var(--color-mint-tea);
+  box-shadow: 0 0 0 3px var(--color-mint-tea), 0 0 12px rgba(168,197,160,0.6);
+}
+
+/* Win overlay */
+.memory-win {
+  position: fixed;
+  inset: 0;
+  background: rgba(62,31,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(4px);
+}
+
+.win-card {
+  background: var(--color-foam);
+  padding: var(--space-8);
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.best-score {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-tabby);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-cream);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-whisker);
+}

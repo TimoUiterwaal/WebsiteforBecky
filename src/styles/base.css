@@ -1,0 +1,42 @@
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+  line-height: 1.6;
+  min-height: 100vh;
+  /* Subtle paper texture using SVG noise */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-mocha);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+
+p { max-width: 65ch; }
+
+a { text-decoration-color: var(--color-caramel); }
+a:hover { color: var(--color-caramel-dark); }
+
+main {
+  padding: var(--space-8) var(--space-4);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.page-title p {
+  max-width: 100%;
+  color: var(--color-tabby);
+  font-size: 1.1rem;
+  margin: var(--space-2) auto 0;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purring Cup Café — Cats, Coffee & Games</title>
+  <meta name="description" content="A passion project where cats and coffee collide. Play mini-games, sip virtual lattes, and find the secret menu.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>☕</text></svg>">
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-art" id="heroCat" title="Click me 7 times...">
+        <span class="hero-cat">😺</span>
+        <span class="hero-coffee">☕</span>
+      </div>
+      <h1 class="hero-tagline">Where every brew<br>comes with a <em>purr.</em></h1>
+      <p class="hero-sub">A passion project made of equal parts coffee grounds and cat hair.</p>
+      <div class="special-wrap">
+        <span class="special-label">Today's Special:</span>
+        <span class="special-text" id="specialText"></span>
+      </div>
+    </section>
+
+    <!-- Coffee rings decoration -->
+    <div class="coffee-ring" style="width:120px;height:120px;top:80px;right:8%;"></div>
+    <div class="coffee-ring" style="width:70px;height:70px;top:200px;right:12%;"></div>
+
+    <!-- Games grid -->
+    <section class="games-section">
+      <h2 style="text-align:center;margin-bottom:var(--space-8)">🎮 Pick Your Game</h2>
+      <div class="games-grid">
+        <a href="/clicker" class="game-card">
+          <div class="game-emoji">🐱</div>
+          <h3>Cat Clicker</h3>
+          <p>Click the cat. Brew coffee. Buy upgrades. Stare at numbers going up. You know the drill.</p>
+          <span class="btn">Play ➜</span>
+        </a>
+        <a href="/memory" class="game-card">
+          <div class="game-emoji">🃏</div>
+          <h3>Memory Cards</h3>
+          <p>Flip cat and coffee cards. Find the pairs before your brain turns to cold brew.</p>
+          <span class="btn">Play ➜</span>
+        </a>
+        <a href="/rhythm" class="game-card">
+          <div class="game-emoji">☕</div>
+          <h3>Pour Rhythm</h3>
+          <p>Hit the beat, catch the pour, fill the cup. Spill it and feel the shame.</p>
+          <span class="btn">Play ➜</span>
+        </a>
+        <a href="/trivia" class="game-card">
+          <div class="game-emoji">🧠</div>
+          <h3>Cat Trivia</h3>
+          <p>How well do you really know cats and coffee? Prove it, human.</p>
+          <span class="btn">Play ➜</span>
+        </a>
+        <a href="/runner" class="game-card">
+          <div class="game-emoji">🏃</div>
+          <h3>Endless Runner</h3>
+          <p>A caffeinated cat sprinting past obstacles. Tap to jump. Try not to trip on the dog.</p>
+          <span class="btn">Play ➜</span>
+        </a>
+        <div class="game-card mystery-card" id="mysteryCard">
+          <div class="game-emoji">🔮</div>
+          <h3>???</h3>
+          <p>There's something hidden around here. The cat knows. The cat isn't telling.</p>
+          <span class="btn btn-secondary">Find it...</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
