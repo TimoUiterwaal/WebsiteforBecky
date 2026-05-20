@@ -72,8 +72,10 @@ function restartGame() {
   spawnTimer = 0; nextSpawn = 1.5
   Object.assign(cat, { y: GROUND, vy: 0, frame: 0, frameTimer: 0, jumping: false, dead: false })
   running = true
+  lastTime = null
   scoreEl.textContent = 0
   beansEl.textContent = 0
+  requestAnimationFrame(gameLoop)
 }
 
 function spawnObstacle() {
