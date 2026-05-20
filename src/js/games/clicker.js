@@ -109,6 +109,11 @@ function updateUI() {
   const bps = computeBPS()
   bpsEl.textContent = `${bps.toFixed(1)} beans/sec`
   prestigeWrap.style.display = state.totalBeans >= 10000 ? 'block' : 'none'
+  // Update shop affordability without rebuilding the list
+  shopList.querySelectorAll('.shop-item').forEach((el, i) => {
+    const cost = costFor(UPGRADES[i], state.counts[UPGRADES[i].id] || 0)
+    el.classList.toggle('disabled', state.beans < cost)
+  })
 }
 
 // Click handler
