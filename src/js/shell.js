@@ -16,8 +16,7 @@ export function injectShell() {
           <a href="/memory">Memory Cards</a>
           <a href="/rhythm">Pour Rhythm</a>
           <a href="/trivia">Trivia</a>
-          <a href="/runner">Cat Runner</a>
-          <a href="/about">About</a>
+<a href="/about">About</a>
         </div>
       </div>
     </nav>`

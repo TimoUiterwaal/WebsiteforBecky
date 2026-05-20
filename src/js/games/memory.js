@@ -1,7 +1,7 @@
 import { getState, setState } from '../storage.js'
 import { sfx } from '../sfx.js'
 
-const EASY_PAIRS = ['🐱','☕','🐾','🫘','😺','🧋','🐈','🍵']
+const EASY_PAIRS = ['🐟','☕','🐾','🫘','😺','🧋','🐈','🍵']
 const HARD_EXTRA  = ['😸','🌿','🐈‍⬛','🥐']
 
 let difficulty = 'easy'

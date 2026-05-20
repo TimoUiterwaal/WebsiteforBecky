@@ -4,8 +4,7 @@
     { "route": "/memory",  "rewrite": "/memory.html"  },
     { "route": "/rhythm",  "rewrite": "/rhythm.html"  },
     { "route": "/trivia",  "rewrite": "/trivia.html"  },
-    { "route": "/runner",  "rewrite": "/runner.html"  },
-    { "route": "/menu",    "rewrite": "/menu.html"    },
+{ "route": "/menu",    "rewrite": "/menu.html"    },
     { "route": "/about",   "rewrite": "/about.html"   }
   ],
   "navigationFallback": {
